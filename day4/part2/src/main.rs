@@ -73,34 +73,34 @@ fn main() {
 				}
 				"iyr" => {
 					let re = Regex::new(r"^[0-9]{4}$").unwrap();
-                    if !re.is_match(value[j]) {
-                        valid = false;
-                        break;
-                    }
-                    let num = value[j].parse::<i32>().unwrap();
-                    if num < 2010 || num > 2020 {
-                        valid = false;
-                        break;
-                    }
+					if !re.is_match(value[j]) {
+						valid = false;
+						break;
+					}
+					let num = value[j].parse::<i32>().unwrap();
+					if num < 2010 || num > 2020 {
+						valid = false;
+						break;
+					}
 				}
 				"eyr" => {
-                    let re = Regex::new(r"^[0-9]{4}$").unwrap();
-                    if !re.is_match(value[j]) {
-                        valid = false;
-                        break;
-                    }
-                    let num = value[j].parse::<i32>().unwrap();
-                    if num < 2020 || num > 2030 {
-                        valid = false;
-                        break;
-                    }
-                }
+					let re = Regex::new(r"^[0-9]{4}$").unwrap();
+					if !re.is_match(value[j]) {
+						valid = false;
+						break;
+					}
+					let num = value[j].parse::<i32>().unwrap();
+					if num < 2020 || num > 2030 {
+						valid = false;
+						break;
+					}
+				}
 				"pid" => {
 					let re = Regex::new(r"^[0-9]{9}$").unwrap();
-                    if !re.is_match(value[j]) {
-                        valid = false;
-                        break;
-                    }
+					if !re.is_match(value[j]) {
+						valid = false;
+						break;
+					}
 				}
 				"ecl" => {
 					let con = vec!["amb", "blu", "brn", "gry", "grn", "hzl", "oth"];
@@ -111,10 +111,10 @@ fn main() {
 				}
 				"hcl" => {
 					let re = Regex::new(r"^#[0-9a-f]{6}$").unwrap();
-                    if !re.is_match(value[j]) {
-                        valid = false;
-                        break;
-                    }
+					if !re.is_match(value[j]) {
+						valid = false;
+						break;
+					}
 				}
 				"hgt" => {
 					let len = value[j].len();
